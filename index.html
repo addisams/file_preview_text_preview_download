@@ -1,0 +1,72 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-1 col-md-5">
+          <input
+            type="file"
+            id="file-input"
+            accept=".doc,.docx,.pdf,.jpg,.jpeg,.png,.xlsx"
+          />
+          <div id="file-preview"></div>
+          <div id="text-preview"></div>
+        </div>
+        <div class="col-2 col-md-5">
+          <div id="canvas" contenteditable="true"></div>
+          <button id="download-pdf">Download as PDF</button>
+          <button id="download-text">Download as Text</button>
+          <button id="download-doc">Download as Doc</button>
+          <button id="download-excel">Download as Excel</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/tesseract.js@2.1.4/dist/tesseract.min.js"></script>
+    <!-- <script src="https://unpkg.com/mammoth@1.4.6/dist/mammoth.browser.min.js"></script> -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/mammoth/1.8.0/mammoth.browser.min.js"
+      integrity="sha512-wuWo/cLB9W5BsZeyTYLuiTwr+FDlvjQC7C6atr+To7Jk92XHWI7WsImJZiruw7C9bnc8Zg7N0ncQI2Q/B4PQYw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="https://unpkg.com/jszip@3.7.1/dist/jszip.min.js"></script>
+    <!-- <script src="https://mozilla.github.io/pdf.js/build/pdf.js"></script> -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.6.347/pdf.min.js"
+      integrity="sha512-Z8CqofpIcnJN80feS2uccz+pXWgZzeKxDsDNMD/dJ6997/LSRY+W4NmEt9acwR+Gt9OHN0kkI1CTianCwoqcjQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="https://unpkg.com/xlsx@0.17.4/dist/xlsx.full.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- <script src="https://unpkg.com/jspdf@2.3.1/dist/jspdf.umd.min.js"></script> -->
+
+    <script src="https://unpkg.com/xlsx@0.17.4/dist/xlsx.full.min.js"></script>
+    <script src="https://unpkg.com/jspdf@2.3.1/dist/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script>
+      window.jsPDF = window.jspdf.jsPDF;
+    </script>
+    <script src="js/script.js"></script>
+  </body>
+</html>
